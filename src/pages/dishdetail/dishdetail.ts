@@ -24,7 +24,7 @@ export class DishdetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     @Inject('BaseURL') public BaseURL,
-    private favoriteservice: FavoriteProvider) {
+    public favoriteservice: FavoriteProvider) {
     this.dish = navParams.get('dish');
     this.favorite = favoriteservice.isFavorite(this.dish.id);
     this.numcomments = this.dish.comments.length;

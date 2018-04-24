@@ -21,9 +21,9 @@ export class HomePage implements OnInit {
   leaderErrMess: string;
 
   constructor(public navCtrl: NavController,
-    private dishservice: DishProvider,
-    private promotionservice: PromotionProvider,
-    private leaderservice: LeaderProvider,
+    public dishservice: DishProvider,
+    public promotionservice: PromotionProvider,
+    public leaderservice: LeaderProvider,
     @Inject('BaseURL') public BaseURL) { }
 
   ngOnInit() {

@@ -20,7 +20,7 @@ export class AboutPage implements OnInit{
  errMess: string;
 
  constructor(public navCtrl: NavController, public navParams: NavParams,
-   private leaderservice: LeaderProvider,
+   public leaderservice: LeaderProvider,
    @Inject('BaseURL') public BaseURL) { }
 
    ngOnInit() {
