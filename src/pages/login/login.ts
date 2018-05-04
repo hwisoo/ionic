@@ -64,7 +64,7 @@ export class LoginPage {
     console.log(this.user);
     if(this.loginForm.get('remember').value)
       this.storage.set('user', this.user);
-      else
+    else
       this.storage.remove('user');
       this.viewCtrl.dismiss();
   }
