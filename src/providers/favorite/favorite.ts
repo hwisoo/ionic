@@ -29,10 +29,10 @@ export class FavoriteProvider {
   }
 
   addFavorite(id: number): boolean {
-    if (!this.isFavorite(id)){
+    if (!this.isFavorite(id))
     this.favorites.push(id);
     this.storage.set('favorites', this.favorites);
-    }
+    
     
     console.log('favorites', this.favorites);
     return true;
@@ -59,7 +59,7 @@ export class FavoriteProvider {
    let index = this.favorites.indexOf(id);
    if (index >= 0) {
     this.favorites.splice(index, 1);  
-    this.storage.remove('favorites');
+    this.storage.set('favorites', this.favorites);
     return this.getFavorites();
     
    }
